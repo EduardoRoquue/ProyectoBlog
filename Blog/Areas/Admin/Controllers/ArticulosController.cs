@@ -145,6 +145,29 @@ namespace Blog.Areas.Admin.Controllers
         }
 
 
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            var articuloDesdeDb = _contenedorTrabajo.Articulo.Get(id);
+            string rutaDirectorioPrincipal = _hostingEnvironment.WebRootPath;
+            var rutaImagen = Path.Combine(rutaDirectorioPrincipal, articuloDesdeDb.urlImagen.TrimStart('\\'));
+
+            if (System.IO.File.Exists(rutaImagen))
+            {
+                System.IO.File.Delete(rutaImagen);
+            }
+
+            if (articuloDesdeDb == null)
+            {
+                return Json(new { success = false, message = "Error borrando artículo"});
+            }
+
+            _contenedorTrabajo.Articulo.Remove(articuloDesdeDb);
+            _contenedorTrabajo.Save();
+            return Json(new { success = true, message = "Exito" });
+        }
+
+
     #region LLAMADAS A LA API
     [HttpGet]
     public IActionResult GetAll()
