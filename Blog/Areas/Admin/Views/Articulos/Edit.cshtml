@@ -8,8 +8,8 @@
 <br />
 
 <h3 class="text-center">Editar articulo</h3>
-<form method="post" asp-action="Create" enctype="multipart/form-data">
-    <input type="hidden" asp-for"Articulo.Id" />
+<form asp-action="Edit" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Articulo.Id" />
     <div class="row px-2 mx-2 border">
         <div asp-validation-summary="ModelOnly" class="text-danger" ></div>
 

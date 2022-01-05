@@ -10,6 +10,7 @@ namespace Blog.AccesoDatos.Data.Repository
         //Aqui es donde se almacenan y procesan los repositorios ya creados
         ICategoriaRepository Categoria { get; }
         IArticuloRepository Articulo { get; }
+        ISliderRepository Slider { get; }
 
         void Save();
     }

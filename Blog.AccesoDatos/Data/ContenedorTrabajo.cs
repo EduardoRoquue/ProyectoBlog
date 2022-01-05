@@ -1,4 +1,5 @@
 ﻿using Blog.AccesoDatos.Data.Repository;
+using Blog.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -17,12 +18,14 @@ namespace Blog.AccesoDatos.Data
             _db = db;
             Categoria = new CategoriaRepository(_db);
             Articulo = new ArticuloRepository(_db);
+            Slider = new SliderRepository(_db);
         }
 
         //Metodos del repositorio almacenado en el RepositorioTrabajo
         //Aqui van las interfaces de los repositorios
         public ICategoriaRepository Categoria { get; private set; }
         public IArticuloRepository Articulo { get; private set; }
+        public ISliderRepository Slider { get; private set; }
 
         public void Dispose()
         {
