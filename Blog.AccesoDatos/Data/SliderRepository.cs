@@ -1,4 +1,5 @@
 ﻿using Blog.AccesoDatos.Data.Repository;
+using Blog.AccesoDatos.Data.Repository.IRepository;
 using Blog.Models;
 using System;
 using System.Collections.Generic;

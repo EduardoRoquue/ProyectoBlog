@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Blog.AccesoDatos.Data.Repository
+namespace Blog.AccesoDatos.Data.Repository.IRepository
 {
     public interface ISliderRepository : IRepository<Slider>
     {

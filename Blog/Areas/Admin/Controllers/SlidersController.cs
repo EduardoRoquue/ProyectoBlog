@@ -1,6 +1,6 @@
 ﻿using Blog.AccesoDatos.Data.Repository;
 using Blog.Models;
-using Blog.Models.ViewModels;
+//using Blog.Models.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System;

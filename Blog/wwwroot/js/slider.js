@@ -19,19 +19,24 @@ function cargarDataTable() {
             { "data": "nombre", "width": "30%" },
             { "data": "estado", "width": "20%" },
             {
+                "data": "urlImagen",
+                "render": function (imagen) {
+                    return `<img src="../${imagen}" width="200">`
+                }
+            },
+            {
                 "data": "id",
                 "render": function (data) {
-                    return `<div class="text-center">
+                return `<div class="text-center">
                             <a href='/Admin/Sliders/Edit/${data}' class='btn btn-outline-success text-black' style='cursor:pointer; width:100px;'>
                             <i class='fas fa-edit'></i>Editar
                             </a>
                                 &nbsp;
-                            <a onclick=Delete("/Admin/Sliders/Delete/${data}")
-                            class='btn btn-outline-danger text-black' style = 'cursor:pointer; width:100px;' >
+                            <a onclick=Delete("/Admin/Sliders/Delete/${data}") class='btn btn-outline-danger text-black' style = 'cursor:pointer; width:100px;' >
                             <i class='fas fa-trash-alt'></i> Borrar
                             </a>
                             `;
-                }, "width": "35%"
+            }, "width": "35%"
             }
         ],
         "language": {

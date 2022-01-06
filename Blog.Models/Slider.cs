@@ -15,6 +15,7 @@ namespace Blog.Models
         public string Nombre { get; set; }
 
         [Required]
+        [Display(Name = "Estado")]
         public bool Estado { get; set; }
 
         [DataType(DataType.ImageUrl)]
